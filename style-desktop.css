@@ -1,0 +1,121 @@
+* {
+    border: none;
+    border-radius: 0;
+    font-family: mononoki Nerd Font, FontAwesome, Noto Sans;
+    font-size: 14px;
+    min-height: 0;
+}
+
+window#waybar {
+    background: transparent;
+    color:  #222222;
+}
+
+window#waybar.hidden {
+    opacity: 0.5;
+}
+
+tooltip {
+    background: #222222;
+    color: #222222;
+    border-radius: 15px;
+    border-width: 0px;
+    border-style: solid;
+    border-color: #222222;
+}
+
+#workspaces button {
+    padding: 5px 10px;
+    color: #cccccc;
+}
+
+#workspaces button.focused {
+    color:  #222222;
+    background-color: #cccccc;
+    border-radius: 15px;
+}
+
+#workspaces button.urgent {
+    color: #222222;
+    background-color: #cccccc;
+    border-radius: 15px;
+}
+
+#workspaces button:hover {
+    background-color: #cccccc;
+    color: #cccccc;
+    border-radius: 15px;
+}
+
+#custom-date,
+#clock,
+#tray,
+#battery,
+#pulseaudio,
+#network,
+#idle_inhibitor,
+#cpu,
+#temperature,GPU,
+#temperature,CPU,
+#temperature,water,
+#memory,
+#workspaces {
+    background-color: #222222;
+    opacity: 0.8; /* Adjust the opacity value as desired */
+    padding: 5px 10px;
+    margin: 5px 0px;
+}
+
+#workspaces {
+    background-color: #222222;
+    opacity: 0.8; /* Adjust the opacity value as desired */
+    border-radius: 15px 0px 0px 15px;
+}
+
+#custom-date {
+    color: #ffd700;
+    border-radius: 0px 0px 0px 0px;
+}
+
+#clock {
+    color: #ff00ff; /* Main color - pink */
+    border-radius: 0px 15px 15px 0px;
+    margin-right: 10px;
+}
+
+#tray {
+    color: #ff0080; /* Main color - pink */
+    border-radius: 0px 0px 0px 0px;
+}
+
+#idle_inhibitor {
+    color: #ff00ff; /* Main color - pink */
+}
+
+#network {
+    color: #ff00ff; /* Main color - pink */
+}
+
+#scratchpad {
+    color: #ff00ff; /* Main color - pink */
+}
+
+#scratchpad.empty {
+    color: #ff00ff; /* Gray color for empty scratchpad */
+}
+
+#cpu {
+    color:  #00ced1; /* Secondary color - yellow */
+}
+
+#memory {
+    color:  #00ced1; /* Secondary color - yellow */
+}
+
+#temperature {
+    color:  #00ced1; /* Secondary color - yellow */
+}
+
+#pulseaudio {
+    color: #CCCCCC; /* Gray color for PulseAudio module */
+}
