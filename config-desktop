@@ -1,121 +1,95 @@
-{
-    "position": "top", 
-    "layer": "top",
-    "height": 30,
-    "modules-center": [
-    "sway/workspaces",
-    "temperature#GPU",
-    "temperature#water",
-    "temperature#CPU",
-    "memory",
-    "cpu",
-    "idle_inhibitor",
-    "network", 
-    "tray",
-    "pulseaudio", 
-    "custom/date", 
-    "clock"
+// Starting point, "name" is to devide the displays
+// position is the location of the bar top, bottom, left, right
+// output is the actual display name good for multi monitor setups used in conjunction with "name"
+// "include" is used to grab the preconfigured modules making this file more managable
+// the list is module selection, add and remove as needed, make sure the module is configured in the linked file
+[
+{       "name": "DP-2",
+        "position": "top",
+        "output": "DP-2",
+        "layer": "top",
+        "height": 30,
+	"include": [ "~/.config/waybar/modules.txt" ],
+        "modules-center": [
+            "sway/workspaces",
+            "sway/scratchpad",
+            "temperature#GPU",
+            "temperature#water",
+            "temperature#CPU",
+            "memory",
+            "cpu",
+            "idle_inhibitor",
+            "network",
+            "tray",
+            "pulseaudio",
+            "clock"
 ],
 
-// Modules configuration
-"sway/workspaces": { 
-		"disable-scroll": true,
-		"all-outputs": true,
-		"format": "{icon}",
+//  config for workspace naming and general layout, my sway config file is setup to only allow defined workspaces to display on the defind monitor
+"sway/workspaces": {
+        "disable-scroll": true,
+        "all-outputs": false,
+        "format": "{icon}"
+},
 "persistent_workspaces": {
-	 		"1": [],
-	 		"2": [],
-	 		"3": [],
-	 		"4": [],
-	 		"5": [],
-	 		"6": [],
-	 		"7": [],
-	 		"8": [],
-	 		"9": [],
-	 		"10": []
-},
-"format-icons": {       "1": "🙭",
-             		"2": "二",
-             		"3": "三",
-             		"4": "四",
-             		"5": "五",
-             		"6": "六",
-             		"7": "七",
-             		"8": "八",
-             		"9": "九",
-             		"10": "〇"
-}
-},
-"clock": {
-	"format": "{:%H:%M} "
+                        "1": ["DP-2"],
+                        "2": ["DP-2"],
+                        "3": ["DP-2"],
+                        "4": ["DP-2"],
+                        "5": ["DP-2"],
+                        "6": ["DP-2"],
+                        "7": ["DP-2"]
 
 },
-"temperature#water": {
-        "thermal-zone": 0,
-        "hwmon-path": "/sys/class/hwmon/hwmon3/temp2_input",
-        "format": "{temperatureC}ᶜ {icon}",
-        "format-icons": [ "💧"]
-},
-"temperature#CPU": {
-        "thermal-zone": 0,
-        "hwmon-path": "/sys/class/hwmon/hwmon3/temp3_input",
-        "format": "{temperatureC}ᶜ {icon}",
-        "format-icons": [""]
-},
-"temperature#GPU": {
-        "thermal-zone": 0,
-        "hwmon-path": "/sys/class/hwmon/hwmon7/temp1_input",
-        "format": "{temperatureC}ᶜ {icon}",
-        "format-icons": ["🧬"]
-},
-"cpu": {
-    "interval": 10,
-    "format": "{usage}% ",
-    "max-length": 10
-},
-"network": {
-        //"format-wifi": " {bandwidthDowbBits}  {bandwidthUpBits} ",
-        "format": "{bandwidthDownBits}  {bandwidthUpBits} ",
-        "interval": 3,
-        "on-click": "foot -e nmtui",
-        "format-linked": "(No IP)",
-        "format-disconnected": "",
-        "tooltip-format": "{ifname}: {ipaddr}"
-},
-"idle_inhibitor": {
-  "format": "{icon}",
-  "format-icons": {
-    "activated": "",
-    "deactivated": ""
-  }
-},
-"memory": {
-  "interval": 30,
-  "format": "{used:0.1f}G  "
-},
-	"pulseaudio": {
-		// "scroll-step": 1, // %, can be a float
-		"format": "{icon} {volume}% {format_source}",
-		"format-muted": "🔇 {format_source}",
-		"format-bluetooth": "{icon} {volume}% {format_source}",
-		"format-bluetooth-muted": "🔇 {format_source}",
-
-		"format-source": " {volume}%",
-		"format-source-muted": "",
-
-		"format-icons": {
-			"headphones": "",
-			"handsfree": "",
-			"headset": "",
-			"phone": "",
-			"portable": "",
-			"car": "",
-			"default": ["🔈", "🔉", "🔊"]
-		},
-	        "on-click": "pamixer -t",
-                "on-click-right": "pavucontrol"
-    
-	},
+"format-icons": {       "1": "ðŸ™­",
+                        "2": "2",
+                        "3": "3",
+                        "4": "4",
+                        "5": "5",
+                        "6": "6",
+                        "7": "7"
 
 }
+}, {
+// this is the section for the second monitor, basically a rince and repeat
+
+	"name": "HD",
+        "position": "bottom",
+        "output": "HDMI-A-1",
+        "layer": "top",
+        "height": 30,
+		"include": [ "~/.config/waybar/modules.txt" ],
+        "modules-center": [
+            "sway/workspaces",
+            "sway/scratchpad",
+            "temperature#GPU",
+            "temperature#water",
+            "temperature#CPU",
+            "memory",
+            "cpu",
+            "idle_inhibitor",
+            "network",
+            "tray",
+            "pulseaudio",
+            "clock"
+],
+
+//  "Modules configuration"
+"sway/workspaces": { 
+        "disable-scroll": true,
+        "all-outputs": false,
+        "format": "{icon}"
+},
+"persistent_workspaces": {
+                        "8": ["HDMI-A-1"],
+                        "9": ["HDMI-A-1"],
+                        "10": ["HDMI-A-1"]
+},
+"format-icons": {       "8": "8",
+                        "9": "9",
+                        "10": "10"
+
+},
 }
+]
+
