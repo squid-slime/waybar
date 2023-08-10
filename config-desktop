@@ -4,8 +4,9 @@
 // "include" is used to grab the preconfigured modules making this file more managable
 // the list is module selection, add and remove as needed, make sure the module is configured in the linked file
 [
-{       "name": "DP-2",
-        "position": "top",
+	{
+	"name": "DP-2",
+	"position": "top",
         "output": "DP-2",
         "layer": "top",
         "height": 30,
@@ -23,8 +24,9 @@
             "tray",
             "pulseaudio",
             "clock"
-],
-}, {
+	],
+}, 
+	{
 
 	"name": "HD",
         "position": "bottom",
@@ -45,6 +47,6 @@
             "tray",
             "pulseaudio",
             "clock"
-],
-}
+		],
+	}
 ]
