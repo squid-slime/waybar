@@ -1,7 +1,7 @@
 * {
     border: none;
     border-radius: 0;
-    font-family: mononoki Nerd Font, FontAwesome, Noto Sans;
+    font-family: Fira Code, FontAwesome;
     font-size: 14px;
     min-height: 0;
 }
@@ -25,26 +25,46 @@ tooltip {
 }
 
 #workspaces button {
-    padding: 5px 10px;
+    padding: 3px 7px;
     color: #cccccc;
 }
 
 #workspaces button.focused {
-    color:  #222222;
-    background-color: #cccccc;
+    color:  #CCCCCC;
+    background-color: #222222;
     border-radius: 15px;
 }
-
 #workspaces button.urgent {
-    color: #222222;
-    background-color: #cccccc;
+    color: yellow;
+    background-color: black;
     border-radius: 15px;
+    animation: urgentFlash 0.5s infinite alternate;
+}
+
+@keyframes urgentFlash {
+    0% {
+        background-color: black;
+        color: yellow;
+    }
+    100% {
+        background-color: yellow;
+        color: black;
+    }
 }
 
 #workspaces button:hover {
-    background-color: #cccccc;
-    color: #cccccc;
-    border-radius: 15px;
+	color: #CCCCCC;
+	border-radius: 15px;
+    	animation: urgentFlash 1.5s infinite alternate;
+}
+
+@keyframes urgentFlash {
+    0% {
+        color: #ff00ff;
+    }
+    100% {
+        color: #00ced1;
+    }
 }
 
 #custom-date,
@@ -55,26 +75,22 @@ tooltip {
 #network,
 #idle_inhibitor,
 #cpu,
+#scratchpad,
 #temperature,GPU,
 #temperature,CPU,
 #temperature,water,
 #memory,
-#workspaces {
+#workspaces 
+
+{
     background-color: #222222;
-    opacity: 0.8; /* Adjust the opacity value as desired */
     padding: 5px 10px;
     margin: 5px 0px;
 }
 
 #workspaces {
     background-color: #222222;
-    opacity: 0.8; /* Adjust the opacity value as desired */
     border-radius: 15px 0px 0px 15px;
-}
-
-#custom-date {
-    color: #ffd700;
-    border-radius: 0px 0px 0px 0px;
 }
 
 #clock {
@@ -101,7 +117,7 @@ tooltip {
 }
 
 #scratchpad.empty {
-    color: #ff00ff; /* Gray color for empty scratchpad */
+    color: #CCCCCC; /* Gray color for empty scratchpad */
 }
 
 #cpu {
@@ -113,7 +129,7 @@ tooltip {
 }
 
 #temperature {
-    color:  #00ced1; /* Secondary color - yellow */
+    color: #00ced1;
 }
 
 #pulseaudio {
