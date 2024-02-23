@@ -1,16 +1,10 @@
-// Starting point, "name" is to devide the displays
-// position is the location of the bar top, bottom, left, right
-// output is the actual display name good for multi monitor setups used in conjunction with "name"
-// "include" is used to grab the preconfigured modules making this file more managable
-// the list is module selection, add and remove as needed, make sure the module is configured in the linked file
 [
-	{
-	"name": "DP-2",
-	"position": "top",
+{       "name": "DP-2",
+        "position": "top",
         "output": "DP-2",
         "layer": "top",
         "height": 30,
-	"include": [ "~/.config/waybar/modules.txt" ],
+        "include": [ "~/.config/waybar/modules.txt" ],
         "modules-center": [
             "sway/workspaces",
             "sway/scratchpad",
@@ -24,16 +18,15 @@
             "tray",
             "pulseaudio",
             "clock"
-	],
-}, 
-	{
+],
+}, {
 
-	"name": "HD",
+        "name": "HD",
         "position": "bottom",
         "output": "HDMI-A-1",
         "layer": "top",
         "height": 30,
-		"include": [ "~/.config/waybar/modules.txt" ],
+                "include": [ "~/.config/waybar/modules.txt" ],
         "modules-center": [
             "sway/workspaces",
             "sway/scratchpad",
@@ -47,6 +40,6 @@
             "tray",
             "pulseaudio",
             "clock"
-		],
-	}
+],
+}
 ]
