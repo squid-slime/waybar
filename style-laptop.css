@@ -1,50 +1,51 @@
 * {
-    border: none;
-    border-radius: 0;
-    font-family: mononoki Nerd Font, FontAwesome, Noto Sans;
-    font-size: 14px;
-    min-height: 0;
+	border: none;
+	border-radius: 3;
+	font-family: font-awesome-5;
+	font-size: 15px;
+	min-height: 0;
 }
 
 window#waybar {
-    background: transparent;
-    color: #222222;
-}
-
-window#waybar.hidden {
-    opacity: 0.5;
+	background-color: transparent;
 }
 
 tooltip {
-    background: #222222;
-    color: #222222;
-    border-radius: 15px;
-    border-width: 0px;
-    border-style: solid;
-    border-color: #222222;
+	background-color: rgba(0, 0, 0, 0.63);
+	border-radius: 15px;
+	border-width: 0px;
+	border-style: solid;
+	border-color: #222222;
 }
 
 #workspaces button {
-    padding: 5px 10px;
-    color: #cccccc;
+	padding: 0px 10px;
+	color: #cccccc;
 }
 
 #workspaces button.focused {
-    color: #222222;
-    background-color: #cccccc;
-    border-radius: 15px;
+	color:  #cccccc;
+	background: transparent;
 }
-
 #workspaces button.urgent {
-    color: #222222;
-    background-color: #cccccc;
-    border-radius: 15px;
+	border-radius: 15px;
+	animation: urgentFlash 0.5s infinite alternate;
 }
 
 #workspaces button:hover {
-    background-color: #cccccc;
-    color: #cccccc;
-    border-radius: 15px;
+	background: transparent;
+    	animation: urgentFlash 1.5s infinite alternate;
+	box-shadow: inherit;
+	text-shadow: inherit;
+}
+
+@keyframes urgentFlash {
+	0% {
+	color: #ff00ff;
+	}
+	100% {
+	color: #00ced1;
+	}
 }
 
 #custom-date,
@@ -55,64 +56,89 @@ tooltip {
 #network,
 #idle_inhibitor,
 #cpu,
+#scratchpad,
+#temperature,GPU,
+#temperature,CPU,
+#temperature,water,
 #memory,
-#workspaces {
-    background-color: #222222;
-    opacity: 0.8; /* Adjust the opacity value as desired */
-    padding: 5px 10px;
-    margin: 5px 0px;
+#workspaces 
+
+{
+	background-color: rgba(0, 0, 0, 0.63);
+	padding: 0px 10px;
+	margin: 0px 0px;
 }
 
 #workspaces {
-    background-color: #222222;
-    opacity: 0.8; /* Adjust the opacity value as desired */
-    border-radius: 15px 0px 0px 15px;
-}
-
-#custom-date {
-    color: #ffd700;
-    border-radius: 0px 0px 0px 0px;
+	background-color: rgba(0, 0, 0, 0.63);
+	border-radius: 15px 0px 0px 15px;
 }
 
 #clock {
-    color: #ff00ff; /* Main color - pink */
-    border-radius: 0px 15px 15px 0px;
-    margin-right: 10px;
+	color: #ff00ff; 
+	border-radius: 0px 15px 15px 0px;
+	margin-right: 0px;
+        margin-left: 0px;
 }
 
 #tray {
-    color: #ff0080; /* Main color - pink */
-    border-radius: 0px 0px 0px 0px;
+	color: #ff0080; 
+	border-radius: 0px 0px 0px 0px;
+	margin-right: 0px;
+        margin-left: 0px;
 }
 
 #idle_inhibitor {
-    color: #ff00ff; /* Main color - pink */
+	color: #ff00ff; 
+	border-radius: 0px 0px 0px 0px;
+	margin-right: 0px;
+        margin-left: 0px;
 }
 
 #network {
-    color: #ff00ff; /* Main color - pink */
+	color: #ff00ff; 
+	border-radius: 0px 0px 0px 0px;
+	margin-right: 0px;
+        margin-left: 0px;
 }
 
 #scratchpad {
-    color: #ff00ff; /* Main color - pink */
+	color: #ff00ff; 
+	border-radius: 0px 0px 0px 0px;
+	margin-right: 0px;
+	margin-left: 0px;
 }
 
 #scratchpad.empty {
-    color: #ff00ff; /* Gray color for empty scratchpad */
+	color: #CCCCCC; 
+        border-radius: 0px 0px 0px 0px;
+        margin-right: 0px;
+        margin-left: 0px;
 }
 
 #cpu {
-    color: #00ced1; /* Secondary color - yellow */
+	color:  #00ced1;
+        border-radius: 0px 0px 0px 0px;
+        margin-right: 0px;
+        margin-left: 0px;
 }
 
 #memory {
-    color: #00ced1; /* Secondary color - yellow */
+	color:  #00ced1;
+        border-radius: 0px 0px 0px 0px;
+        margin-right: 0px;
+        margin-left: 0px;
 }
 
-#battery {
-    color: #00ced1; /* Secondary color - yellow */
+#temperature {
+	color: #00ced1;
+        border-radius: 0px 0px 0px 0px;
+        margin-right: 0px;
+        margin-left: 0px;
 }
-
 #pulseaudio {
-    color: #CCCCCC; /* Gray color for PulseAudio module */
+	color: #CCCCCC; 
+        border-radius: 0px 0px 0px 0px;
+        margin-right: 0px;
+        margin-left: 0px;
 }
