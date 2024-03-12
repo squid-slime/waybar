@@ -1,0 +1,121 @@
+{
+"sway/workspaces": {
+	"disable-scroll": true,
+	"all-outputs": false,
+	"active-only": false,
+	"format": "{icon}",
+	"persistent_workspaces": {
+                        "1": ["DP-2"],
+                        "2": ["DP-2"], 
+                        "3": ["DP-2"],
+                        "4": ["DP-2"],
+                        "5": ["DP-2"],
+                        "6": ["DP-2"],
+                        "7": ["DP-2"],
+                        "8": ["HDMI-A-1"],
+                        "9": ["HDMI-A-1"],
+                        "10": ["HDMI-A-1"],
+	},
+	"format-icons": {
+			"1": "1",
+      			"2": "2",
+      			"3": "3",
+      			"4": "4",
+      			"5": "5",
+      			"6": "6",
+      			"7": "7",
+      			"8": "8",
+      			"9": "9",
+      			"10": "10",
+      			"urgent": "",
+      			"focused": "",
+	}
+},
+"sway/scratchpad": {
+	"format": "{icon} {count}",
+	"show-empty": true,
+	"format-icons": ["", ""],
+	"tooltip": true,
+	"tooltip-format": "{app}: {title}",
+	"on-click": "swaymsg scratchpad show"
+},
+"clock": {
+	"format": "{:%H:%M}",
+	"tooltip-format": "{:%a | %d | %b}",
+	"on-click": "foot --app-id=powermenu python ~/.config/sway/pypowerreset.py",
+	"on-click-middle": "foot --app-id=calendar calcure"
+},
+"temperature#water": {
+	"thermal-zone": 0,
+	"hwmon-path": "/dev/t_sensor_temp",
+	"format": "{temperatureC}ᶜ {icon}",
+	"format-icons": [ ""]
+},
+"temperature#CPU": {
+	"thermal-zone": 0,
+	"hwmon-path": "/dev/cpu_temp",
+	"format": "{temperatureC}ᶜ {icon}",
+	"format-icons": [""],
+	"on-click": "foot --app-id=gotop gotop"
+},
+"temperature#GPU": {
+	"thermal-zone": 0,
+	"hwmon-path": "/dev/gpu_temp",
+	"format": "{temperatureC}ᶜ {icon}",
+	"format-icons": [""],
+	"on-click": "foot --app-id=nvtop nvtop"
+},
+"cpu": {
+	"interval": 10,
+	"format": "{usage}% ",
+	"max-length": 10,
+	"on-click": "foot --app-id=btop btop"
+},
+"network": {
+//	"format-wifi": "{bandwidthDowbBits} | {bandwidthUpBits}",
+	"format": " {bandwidthDownBits} | {bandwidthUpBits} ",
+	"interval": 3,
+	"on-click": "foot --app-id=nmtui nmtui",
+	"format-linked": "(No IP)",
+	"format-disconnected": "",
+	"tooltip-format": "{ifname}: {ipaddr}"
+},
+"idle_inhibitor": {
+	"format": "{icon}",
+	"format-icons": {
+	"activated": "",
+	"deactivated": ""
+},
+"idle_inhibitor": {
+    "actions": {"on-click-right": "mode",
+                "on-scroll-up": "light -A 10 && light -O",
+                "on-scroll-down": "light -U 10 && light -O"
+               }
+	}
+},
+"memory": {
+	"interval": 30,
+	"format": "{used:0.1f}G "
+},
+"pulseaudio": {		// too lazy to imploment pipewire
+	"scroll-step": 5, 
+	"format": "{icon} {volume}% {format_source}",
+	"format-muted": "{format_source}",
+	"format-bluetooth": "{icon}󰂰 {volume}% {format_source}",
+	"format-bluetooth-muted": "{format_source}",
+
+	"format-source": "{volume}%",
+	"format-source-muted": "",
+
+	"format-icons": {
+		"headphones": "",
+		"handsfree": "",
+		"headset": "",
+		"phone": "",
+		"portable": "",
+		"car": "",
+		"default": ["", "", ""]
+		},
+"on-click": "foot --app-id=ncpm ncpamixer" // nice full featured audio tui
+	}
+}
