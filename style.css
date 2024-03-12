@@ -1,0 +1,152 @@
+* {
+	border: none;
+	border-radius: 0;
+	font-family: "FontAwesome";
+	font-size: 15px; 
+	font-weight: bold;
+	box-shadow: inherit;
+	text-shadow: inherit;
+	margin-top: 2px;
+	margin-bottom: 2px;
+}
+
+window#waybar {
+	background-color: transparent;
+}
+
+tooltip {
+	background-color: rgba(0, 0, 0, 0.63);
+	border-radius: 15px;
+	border-width: 0px;
+}
+
+#workspaces button {
+	padding: 5px 5px;
+	color: #cccccc;
+}
+
+#workspaces button.focused {
+	color:  #ff00ff;
+}
+#workspaces button.urgent {
+	animation: urgentFlash 0.5s infinite alternate;
+}
+
+#workspaces button:hover {
+	background: transparent;
+	animation: urgentFlash 1.5s infinite alternate;
+}
+
+@keyframes urgentFlash {
+	0% {
+		color: #ff00ff;
+	}
+	100% {
+		color: #00ced1;
+	}
+}
+
+#clock,
+#tray,
+#battery,
+#pulseaudio,
+#network,
+#idle_inhibitor,
+#cpu,
+#scratchpad,
+#temperature,GPU,
+#temperature,CPU,
+#temperature,water,
+#memory,
+#workspaces
+{
+	background-color: rgba(0, 0, 0, 0.63);
+}
+
+#workspaces {
+	background-color: rgba(0, 0, 0, 0.63);
+	border-radius: 30px 0px 0px 30px;
+	padding-left: 13px;
+}
+#clock {
+	color: #ff00ff;
+	border-radius: 0px 30px 30px 0px;
+	margin-right: 0px;
+	margin-left: 0px;
+	padding: 0px 20px;
+
+}
+
+#tray {
+	color: #ff0080; 
+	border-radius: 0px 0px 0px 0px;
+	margin-right: 0px;
+	margin-left: 0px;
+	padding: 0px 20px;
+}
+
+#idle_inhibitor {
+	color: #ff00ff; 
+	border-radius: 0px 0px 0px 0px;
+	margin-right: 0px;
+	margin-left: 0px;
+	padding: 0px 15px;
+
+}
+
+#network {
+	color: #ff00ff; 
+	border-radius: 0px 0px 0px 0px;
+	margin-right: 0px;
+	margin-left: 0px;
+	padding: 0px 15px;
+
+}
+
+#scratchpad {
+	color: #ff00ff; 
+	border-radius: 0px 0px 0px 0px;
+	margin-right: 0px;
+	margin-left: 0px;
+	padding: 0px 15px;
+}
+
+#scratchpad.empty {
+	color: #CCCCCC; 
+	border-radius: 0px 0px 0px 0px;
+	margin-right: 0px;
+	margin-left: 0px;
+	padding: 0px 15px;
+}
+
+#cpu {
+	color:  #00ced1;
+	border-radius: 0px 0px 0px 0px;
+	margin-right: 0px;
+	margin-left: 0px;
+	padding: 10px 10px;
+}
+
+#memory {
+	color:  #00ced1;
+	border-radius: 0px 0px 0px 0px;
+	margin-right: 0px;
+	margin-left: 0px;
+	padding: 10px 10px;
+}
+
+#temperature {
+	color: #00ced1;
+	border-radius: 0px 0px 0px 0px;
+	margin-right: 0px;
+	margin-left: 0px;
+	padding: 10px 10px;
+}
+#pulseaudio {
+	color: #CCCCCC; 
+	border-radius: 0px 0px 0px 0px;
+	margin-right: 0px;
+	margin-left: 0px;
+	padding-right: 10px;
+}
+
