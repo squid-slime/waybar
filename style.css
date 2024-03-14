@@ -1,27 +1,23 @@
 * {
-	border: none;
+	border: 0;
 	border-radius: 0;
 	font-family: "FontAwesome";
-	font-size: 15px; 
+	font-size: 13px; 
 	font-weight: bold;
 	box-shadow: inherit;
 	text-shadow: inherit;
-	margin-top: 2px;
-	margin-bottom: 2px;
 }
 
 window#waybar {
-	background-color: transparent;
+	background-color: rgba(0, 0, 0, 0.30);
 }
 
 tooltip {
-	background-color: rgba(0, 0, 0, 0.63);
+	background-color: rgba(0, 0, 0, 0.80);
 	border-radius: 15px;
-	border-width: 0px;
 }
 
 #workspaces button {
-	padding: 5px 5px;
 	color: #cccccc;
 }
 
@@ -33,7 +29,7 @@ tooltip {
 }
 
 #workspaces button:hover {
-	background: transparent;
+	background: rgba(0, 0, 0, 0.0);
 	animation: urgentFlash 1.5s infinite alternate;
 }
 
@@ -57,24 +53,28 @@ tooltip {
 #temperature,GPU,
 #temperature,CPU,
 #temperature,water,
+#custom-CPUclocks,
+#custom-GPUwattage,
 #memory,
 #workspaces
 {
-	background-color: rgba(0, 0, 0, 0.63);
+	background-color: rgba(0, 0, 0, 0.0);
 }
 
 #workspaces {
-	background-color: rgba(0, 0, 0, 0.63);
+	background-color: rgba(0, 0, 0, 0.0);
 	border-radius: 30px 0px 0px 30px;
+	margin-right: 0px;
+	margin-left: 0px;
 	padding-left: 13px;
 }
 #clock {
 	color: #ff00ff;
-	border-radius: 0px 30px 30px 0px;
-	margin-right: 0px;
+	border-radius: 0px 15px 15px 0px;
+	margin-right: 10px;
 	margin-left: 0px;
-	padding: 0px 20px;
-
+	padding-left: 20px;
+	padding-right: 20px;
 }
 
 #tray {
@@ -82,7 +82,8 @@ tooltip {
 	border-radius: 0px 0px 0px 0px;
 	margin-right: 0px;
 	margin-left: 0px;
-	padding: 0px 20px;
+	padding-left: 20px;
+	padding-right: 20px;
 }
 
 #idle_inhibitor {
@@ -90,7 +91,8 @@ tooltip {
 	border-radius: 0px 0px 0px 0px;
 	margin-right: 0px;
 	margin-left: 0px;
-	padding: 0px 15px;
+	padding-left: 20px;
+	padding-right: 10px;
 
 }
 
@@ -99,8 +101,8 @@ tooltip {
 	border-radius: 0px 0px 0px 0px;
 	margin-right: 0px;
 	margin-left: 0px;
-	padding: 0px 15px;
-
+	padding-left: 10px;
+	padding-right: 0px;
 }
 
 #scratchpad {
@@ -108,7 +110,8 @@ tooltip {
 	border-radius: 0px 0px 0px 0px;
 	margin-right: 0px;
 	margin-left: 0px;
-	padding: 0px 15px;
+	padding-left: 10px;
+	padding-right: 25px;
 }
 
 #scratchpad.empty {
@@ -116,7 +119,8 @@ tooltip {
 	border-radius: 0px 0px 0px 0px;
 	margin-right: 0px;
 	margin-left: 0px;
-	padding: 0px 15px;
+	padding-left: 10px;
+	padding-right: 25px;
 }
 
 #cpu {
@@ -124,7 +128,8 @@ tooltip {
 	border-radius: 0px 0px 0px 0px;
 	margin-right: 0px;
 	margin-left: 0px;
-	padding: 10px 10px;
+	padding-left: 20px;
+	padding-right: 0px;
 }
 
 #memory {
@@ -132,7 +137,8 @@ tooltip {
 	border-radius: 0px 0px 0px 0px;
 	margin-right: 0px;
 	margin-left: 0px;
-	padding: 10px 10px;
+	padding-left: 20px;
+	padding-right: 0px;
 }
 
 #temperature {
@@ -140,13 +146,32 @@ tooltip {
 	border-radius: 0px 0px 0px 0px;
 	margin-right: 0px;
 	margin-left: 0px;
-	padding: 10px 10px;
+	padding-left: 25px;
+	padding-right: 0px;
 }
+#custom-CPUclocks {
+	color: #00ced1;
+	border-radius: 0px 0px 0px 0px;
+	margin-right: 0px;
+	margin-left: 0px;
+	padding-left: 25px;
+	padding-right: 0px;
+}
+#custom-GPUwattage {
+	color: #00ced1;
+	border-radius: 0px 0px 0px 0px;
+	margin-right: 0px;
+	margin-left: 0px;
+	padding-left: 25px;
+	padding-right: 0px;
+}
+
 #pulseaudio {
 	color: #CCCCCC; 
 	border-radius: 0px 0px 0px 0px;
 	margin-right: 0px;
 	margin-left: 0px;
-	padding-right: 10px;
+	padding-left: 0px;
+	padding-right: 20px;
 }
 
