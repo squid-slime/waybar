@@ -1,45 +1,52 @@
 [
-{       "name": "DP-2",
-        "position": "top",
-        "output": "DP-2",
-        "layer": "top",
-        "height": 0,
-	"include": [ "~/.config/waybar/modules.txt" ],
-        "modules-center": [
-            "sway/workspaces",
-            "sway/scratchpad",
-            "temperature#GPU",
-            "temperature#water",
-            "temperature#CPU",
-            "memory",
-            "cpu",
-            "idle_inhibitor",
-            "network",
-            "tray",
-            "pulseaudio",
-            "clock"
-],
-}, {
-
-	"name": "HD",
-        "position": "bottom",
-        "output": "HDMI-A-1",
-        "layer": "top",
-        "height": 0,
-	"include": [ "~/.config/waybar/modules.txt" ],
-        "modules-center": [
-            "sway/workspaces",
-            "sway/scratchpad",
-            "temperature#GPU",
-            "temperature#water",
-            "temperature#CPU",
-            "memory",
-            "cpu",
-//            "idle_inhibitor",
-            "network",
-            "tray",
-            "pulseaudio",
-            "clock"
-],
-}
+	{
+		"name": "DP-2",
+		"position": "top",
+		"output": "DP-2",
+		"layer": "top",
+		"height": 0,  
+		"width": 300,
+		"margin-top": 10, 
+		"include": [ "~/.config/waybar/modules.txt" ],
+		"modules-center": [
+			"sway/workspaces",
+			"sway/scratchpad",
+			"temperature#GPU",
+			"temperature#water",
+			"temperature#CPU",
+			"memory",
+			"cpu",
+			"idle_inhibitor",
+			"network",
+			"tray",
+			"pulseaudio",
+			"clock"
+		]
+	},
+	{
+		"name": "HD",
+		"position": "bottom",
+		"output": "HDMI-A-1",
+		"layer": "top",
+		"height": 0, 
+		"width": 300,
+		"margin-bottom": 10,
+		"include": [ "~/.config/waybar/modules.txt" ],
+		"modules-center": [
+				"sway/workspaces",
+				"sway/scratchpad",
+				"temperature#GPU",
+				"custom/GPUwattage",
+				"temperature#water",
+				"cpu",
+				"temperature#CPU",
+				"custom/CPUclocks",
+				"memory",
+//				"idle_inhibitor",
+				"network",
+				"tray",
+				"pulseaudio",
+				"clock"	
+		]
+	}
 ]
